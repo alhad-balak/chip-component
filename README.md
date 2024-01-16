@@ -1,6 +1,6 @@
 # [CHIP APP](https://chip-component-abhinav.vercel.app/)
 
-## INTRODUCTION
+## Introduction
 A chip component is implemented in react.js (CRA) with following specification. The Screenshot of design has been attached below. All specifications, bonus tasks, and notes have been implemented.
 
 <img width="931" alt="image" src="https://github.com/alhad-balak/chip-component/assets/84512702/2e83e376-a42e-4bbf-8ba8-85a35d3c5dc1">
