@@ -122,7 +122,7 @@ const ChipInput: React.FC<ChipInputProps> = ({ selectedItems, onAddItem, onRemov
                         onKeyUp={handleBackspaceRelease}
                     />
                     {inputValue !== '' && (
-                        <ul className="absolute left-0 right-0 mt-2 bg-white border w-4/5 border-gray-300 rounded">
+                        <ul className="absolute left-0 right-0 mt-2 bg-white border border-gray-300 rounded">
                             {itemList
                                 .filter((item) => !selectedItems.includes(item.name))
                                 .filter((item) =>
