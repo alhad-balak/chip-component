@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// App.tsx
+import React, { useState } from 'react';
+import ChipInput from './ChipInput';
 
-function App() {
+const App: React.FC = () => {
+  const [selectedItems, setSelectedItems] = useState<string[]>([]);
+
+  const handleAddItem = (item: string) => {
+    setSelectedItems([...selectedItems, item]);
+  };
+
+  const handleRemoveItem = (index: number) => {
+    const updatedItems = [...selectedItems];
+    updatedItems.splice(index, 1);
+    setSelectedItems(updatedItems);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mx-auto m-8">
+      <h1 className="text-3xl font-bold mb-4">Chip Component</h1>
+      <ChipInput
+        selectedItems={selectedItems}
+        onAddItem={handleAddItem}
+        onRemoveItem={handleRemoveItem}
+      />
     </div>
   );
-}
+};
 
 export default App;
