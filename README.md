@@ -1,4 +1,4 @@
-# [CHIP APP](https://chip-component-abhinav.vercel.app/)
+# [CHIP COMPONENT APP](https://chip-component-abhinav.vercel.app/)
 
 ## Introduction
 A chip component is implemented in react.js (CRA) with following specification. The Screenshot of design has been attached below. All specifications, bonus tasks, and notes have been implemented.
