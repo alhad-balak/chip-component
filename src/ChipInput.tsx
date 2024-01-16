@@ -48,7 +48,6 @@ const ChipInput: React.FC<ChipInputProps> = ({ selectedItems, onAddItem, onRemov
     };
 
     const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-        // Highlight the last chip when backspace is pressed
         if (!isDoubleBackSpace && highlightedIndex == null && e.key === 'Backspace' && inputValue === '' && selectedItems.length > 0) {
             setHighlightedIndex(selectedItems.length - 1);
         }
@@ -74,7 +73,6 @@ const ChipInput: React.FC<ChipInputProps> = ({ selectedItems, onAddItem, onRemov
 
     const handleBackspaceRelease = () => {
         if (highlightedIndex !== null && isDoubleBackSpace) {
-            // Remove the last highlighted chip
             onRemoveItem(highlightedIndex);
             setHighlightedIndex(null);
             setIsDoubleBackSpace(false);
@@ -124,7 +122,7 @@ const ChipInput: React.FC<ChipInputProps> = ({ selectedItems, onAddItem, onRemov
                         onKeyUp={handleBackspaceRelease}
                     />
                     {inputValue !== '' && (
-                        <ul className="absolute left-0 right-0 mt-2 bg-white border   border-gray-300 rounded">
+                        <ul className="absolute left-0 right-0 mt-2 bg-white border w-4/5 border-gray-300 rounded">
                             {itemList
                                 .filter((item) => !selectedItems.includes(item.name))
                                 .filter((item) =>
