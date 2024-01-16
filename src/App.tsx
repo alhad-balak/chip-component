@@ -16,8 +16,10 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto m-8">
-      <h1 className="text-3xl font-bold mb-4">Chip Component</h1>
+    <div className="container px-6">
+      <div className="flex items-center pt-10 justify-center">
+        <h1 className="text-3xl items-center font-bold mb-4">Chip Component</h1>
+      </div>
       <ChipInput
         selectedItems={selectedItems}
         onAddItem={handleAddItem}
